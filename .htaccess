@@ -1,11 +1,29 @@
-# File:       .htaccess
-# Author:     Wessex Lifts <marketing@wessexlifts.co.uk>
-# Tag Added:  2022-03-08
-# Desciption: Forward Pages, Ignoring Certain Ones
-RewriteEngine on
-RewriteRule ^(ca) - [l]
-RewriteRule ^(canada) - [l]
-RewriteRule ^(EmailSignature) - [l]
-RewriteRule ^(eu) - [l]
-RewriteRule ^(test) - [l]
-RewriteRule (.*) https://wessexlifts.co.uk/ [R=301,L]
+
+# -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+#     File:       .htaccess                                        #
+#     Author:     Wessex Lifts <marketing@wessexlifts.co.uk>       # 
+#     Tag Added:  2022-03-08                                       #
+#     Desciption: Forward Pages, Ignoring Certain Ones             #
+# -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+
+# -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+# REWRITE / FORWARD DOMAIN: 
+#   Forward the domain, automatically, to the .co.uk
+#   version of the website (might need reviewing).
+    <IfModule mod_rewrite.c>
+    # Rewrite On
+      RewriteEngine on
+      
+    # Ignore Redirecting the Following...
+      RewriteRule ^(ca) - [l]
+      RewriteRule ^(canada) - [l]
+      RewriteRule ^(EmailSignature) - [l]
+      RewriteRule ^(eu) - [l]
+      RewriteRule ^(test) - [l]
+      
+    # Mail Redirect, to .co.uk
+      RewriteRule (.*) https://wessexlifts.co.uk/ [R=301,L]
+    </IfModule>
+# -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+
