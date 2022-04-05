@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-# File:       .htaccess
-# Author:     Wessex Lifts <marketing@wessexlifts.co.uk>
-# Tag Added:  2022-03-08
-# Desciption: Forward Pages, Ignoring Certain Ones
-RewriteEngine on
-RewriteRule ^(ca) - [l]
-RewriteRule ^(canada) - [l]
-RewriteRule ^(EmailSignature) - [l]
-RewriteRule ^(eu) - [l]
-RewriteRule ^(test) - [l]
-RewriteRule ^(suggest) - [l]
-RewriteRule (.*) https://wessexlifts.co.uk/ [R=301,L]
-=======
-
 # -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
 #     File:       .htaccess                                        #
 #     Author:     Wessex Lifts <marketing@wessexlifts.co.uk>       # 
@@ -40,5 +25,3 @@ RewriteRule (.*) https://wessexlifts.co.uk/ [R=301,L]
       RewriteRule (.*) https://wessexlifts.co.uk/ [R=301,L]
     </IfModule>
 # -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~--~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-
->>>>>>> a0e96f7d7cab62d689c4ea2a8aaf9bb2de82fa07
